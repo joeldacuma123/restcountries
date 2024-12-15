@@ -73,14 +73,6 @@ app.use(function(err, req, res, next){
     || (~err.message.indexOf('Cast to ObjectId failed')))) {
     return next()
   }
-  // log it
-  // send emails if you want
-  // error page
-  res.status(500).json({
-    error: err,
-    pkg: pkg,
-    CONFIG: CONFIG
-  })
 })
 
 // assume 404 since no middleware responded
